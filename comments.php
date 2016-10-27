@@ -18,16 +18,7 @@ if ( post_password_required() )
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				if( 1 == get_comments_number() ) {
-					printf( __( 'One thought on &ldquo;%2$s&rdquo;', 'travelify' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-				}
-				else {
-					printf( __( '%1$s thoughts on &ldquo;%2$s&rdquo;', 'travelify' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-				}
-			?>
-		</h2>
+		<hr width="90%">
 
 		<ol class="commentlist">
 			<?php wp_list_comments( array( 'callback' => 'travelify_comment', 'style' => 'ol' ) ); ?>

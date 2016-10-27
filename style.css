@@ -1303,6 +1303,11 @@ thead th,tfoot th,thead tr:hover th,tfoot tr:hover th {
 	font-size: 10px;
 	font-size: 0.714285714rem;
 }
+.comments-area hr{
+	border-width: 3px;
+	border-color: #57ad68;
+	color: #57ad68;
+}
 a.comment-reply-link:before {
 	font-family: 'Genericons';
 	content: '\f412';
