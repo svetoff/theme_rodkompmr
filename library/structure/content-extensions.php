@@ -76,12 +76,18 @@ function travelify_theloop() {
 		}
 	}
 	elseif (is_singular('videoyoutube')) {
-		travelify_theloop_for_single_video();}
+		travelify_theloop_for_single_video();
+	}
 
 	elseif (is_post_type_archive('videoyoutube' )) {
-		travelify_theloop_for_video_archive();}
+		travelify_theloop_for_video_archive();
+	}
 
-	elseif( is_single() ) {
+    elseif (is_tax('videos')) {
+        travelify_theloop_for_video_archive();
+    }
+
+    elseif( is_single() ) {
 		travelify_theloop_for_single();
 	}
 	elseif( is_home() ) {
@@ -89,14 +95,11 @@ function travelify_theloop() {
 	}
 	elseif( is_search() ) {
 		travelify_theloop_for_search();
-			}
-	elseif( is_archive() ) {
-		travelify_theloop_for_archive();
-			}
-	elseif (taxonomy_exists('videos')) {
-		travelify_theloop_for_video_archive();
-			}
+	}
 
+    elseif( is_archive() ) {
+        travelify_theloop_for_archive();
+    }
 
 	else {
 		travelify_theloop_for_archive();
@@ -142,7 +145,7 @@ function travelify_theloop_for_archive() {
 			<header class="entry-header">
     			<h2 class="entry-title">
     				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"><?php the_title(); ?></a>
-    			</h2><!-- .entry-title -->
+    			</h2><!-- .entry-title-archive -->
   			</header>
 
   			<div class="entry-content clearfix">
@@ -1044,7 +1047,7 @@ function travelify_theloop_for_video_archive() {
 			<header class="entry-header">
     			<h2 class="entry-video-title"><!--123 -->
     				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"><?php the_title(); ?></a>
-    			</h2><!-- .entry-title -->
+    			</h2><!-- .entry-videos-title -->
   			</header>
 
   			
