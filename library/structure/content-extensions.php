@@ -305,7 +305,8 @@ function travelify_theloop_for_single() {
 
   			<div class="entry-meta-bar clearfix">
     			<div class="entry-meta">
-	    				<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+					<?php if ( is_user_logged_in() ) { ?>
+					<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span> <? } ?>
 	    				<span class="date"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_time() ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 	    				<?php if( has_category() ) { ?>
 	             		<span class="category"><?php the_category(', '); ?></span>
@@ -411,7 +412,7 @@ function travelify_theloop_for_single_video() {
 
   			<div class="entry-meta-bar clearfix">
     			<div class="entry-meta">
-	    				<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+	    				<?php if ( is_user_logged_in() ) { ?><span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span><?php } ?>
 	    				<span class="date"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_time() ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 	    				<?php if( has_category() ) { ?>
 	             		<span class="category"><?php the_category(', '); ?></span>
@@ -599,7 +600,7 @@ function travelify_theloop_for_template_blog_image_large() {
 
   			<div class="entry-meta-bar clearfix">
     			<div class="entry-meta">
-	    				<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+	    				<?php if ( is_user_logged_in() ) { ?><span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span><? } ?>
 	    				<span class="date"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_time() ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 	    				<?php if( has_category() ) { ?>
 	             		<span class="category"><?php the_category(', '); ?></span>
@@ -711,7 +712,7 @@ function travelify_theloop_for_template_blog_image_medium() {
 		</div>
   			<div class="entry-meta-bar clearfix">
     			<div class="entry-meta">
-	    				<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+	    				<?php if ( is_user_logged_in() ) { ?><span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span><? } ?>
 	    				<span class="date"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_time() ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 	    				<?php if( has_category() ) { ?>
 	             		<span class="category"><?php the_category(', '); ?></span>
@@ -826,7 +827,7 @@ function travelify_theloop_for_template_blog_full_content() {
 
   			<div class="entry-meta-bar clearfix">
     			<div class="entry-meta">
-	    				<span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+	    				<?php if ( is_user_logged_in() ) { ?><span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span><? } ?>
 	    				<span class="date"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( get_the_time() ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 	    				<?php if( has_category() ) { ?>
 	             		<span class="category"><?php the_category(', '); ?></span>
